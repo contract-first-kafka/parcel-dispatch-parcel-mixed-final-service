@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: parcel-mixed-final
+  title: parcel-mixed-final
+  description: Disposable Advanced mixed role scaffold
+  annotations:
+    backstage.io/kubernetes-id: parcel-mixed-final
+    contract-first-idp.github.io/scm-provider: github
+    contract-first-idp.github.io/scm-host: github.com
+    contract-first-idp.github.io/domain-org: contract-first-kafka
+    contract-first-idp.github.io/domain-repo: kafka-ux-check-domain
+    contract-first-idp.github.io/repository-name: parcel-dispatch-parcel-mixed-final-service
+    contract-first-idp.github.io/implementation-profile: quarkus-camel-openapi
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/domain-maintainers
+  system: system:default/parcel-dispatch
+  providesApis:
+    - api:default/parcel-lifecycle
+  consumesApis:
+    - api:default/parcel-lifecycle
